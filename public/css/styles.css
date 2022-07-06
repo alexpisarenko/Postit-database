@@ -1,0 +1,26 @@
+.postit {
+    display: inline-block;
+    background-color: yellow;
+    width: 200px;
+    min-height: 100px;
+    margin: 5px;
+    vertical-align: top;
+}
+
+.postit_title {
+    background-color: rgba(0,0,0,0.2);
+    padding: 3px;
+    text-align: center;
+    font-size: 18px;
+}
+
+.postit_message {
+    border: 0;
+    text-align: left;
+    font-size: 12px;
+    padding: 3px;
+    resize: none;
+    min-height: 100px;
+    width: calc(100% - 6px);
+    background-color: transparent;
+}

@@ -1,0 +1,26 @@
+<%- include("header") %>
+
+    <form action="/" method="post">
+        <input type="text" name="postName">
+        <input type="text" name="postMessage">
+        <button type="submit">Create</button>
+    </form>
+
+    <% posts.forEach(element=> { %>
+        <div class="postit">
+            <div class="postit_title">
+                <%= element.name %>
+            </div>
+            <form action="/<%= element._id %>" method="post">
+                <textarea name="postMessage" class="postit_message"><%= element.message %></textarea>
+                <button type="submit">Submit changes.</button>
+            </form>
+
+            <form action="/delete/<%= element._id %>" method="post">
+                <button type="submit">Delete Post</button>
+            </form>
+        </div>
+        <% }); %>
+
+
+            <%- include("footer") %>
